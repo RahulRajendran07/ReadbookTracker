@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>{{data.title}}</p>
+        <p>{{data.author}}</p>
+        <p>{{data.category}}</p>
+        <p>{{data.status}}</p>
+        <p>{{data.progress}}</p>
+        <p>{{data.created_at}}</p>
+        <p>{{data.updated_at}}</p>
+        <p>
+            {% if data.image %}
+            <img src="{{ data.image.url }}" alt="{{ data.title }}" height="100px" width="100px">
+            {%endif%}
+        </p>
+    </div>
+</body>
+</html>
