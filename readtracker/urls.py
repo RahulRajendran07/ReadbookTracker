@@ -21,10 +21,12 @@ from django.urls import path
 from tracker import views
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("",views.IndexView.as_view(),name="home"),
     path('read/create/',views.ReadCreateView.as_view(),name="read-create"),
     path('read/list/',views.ReadListView.as_view(),name="read-list"),
     path('read/<int:pk>/',views.ReadDetailView.as_view(),name="read-detail"),
     path('read/<int:pk>remove/',views.ReadDeleteView.as_view(),name="read-delete"),
     path('read/<int:pk>change/',views.ReadUpdateView.as_view(),name="read-update"),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

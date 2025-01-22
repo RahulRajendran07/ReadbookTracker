@@ -50,3 +50,7 @@ class ReadUpdateView(View):
             form_instance.save()
             return redirect("read-list")
         return render(request,'read_update.html',{"form":form_instance})
+    
+class IndexView(View):
+    def get(self,request,*args,**kwargs):
+        return render(request,'index.html')

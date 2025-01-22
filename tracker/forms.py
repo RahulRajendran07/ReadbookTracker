@@ -6,6 +6,8 @@ class ReadEntryForm(forms.ModelForm):
         model = ReadEntry
         fields = ['title', 'author', 'category', 'status', 'total_pages', 'pages_read', 'image']
         widgets = {
+            "title":forms.TextInput(attrs={'class':'form-control'}),
+            "author":forms.TextInput(attrs={'class':'form-control'}),
             'status': forms.Select(attrs={'class': 'form-control'}),
             'category': forms.Select(attrs={'class': 'form-control'}),
             'image': forms.ClearableFileInput(attrs={'class': 'form-control'}),
